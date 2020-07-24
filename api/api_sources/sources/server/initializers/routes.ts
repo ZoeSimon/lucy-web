@@ -30,6 +30,7 @@ import { accountRoute,
     ObserverWorkflowRouteController,
     MusselsAppCodesRouteController,
     chemicalTreatmentRoute,
+    biologicalTreatmentRoute,
     mechanicalMonitorRoute,
     UploadRouteController,
     animalObservationRoute,
@@ -60,6 +61,9 @@ export const routes = (app: Application) => {
 
     // Chemical Treatment
     app.use('/api/treatment/chemical', chemicalTreatmentRoute());
+
+    // Biological Treatment
+    app.use('/api/treatment/biological', biologicalTreatmentRoute());
 
     // Mechanical Monitor
     app.use('/api/monitor/mechanical', mechanicalMonitorRoute());

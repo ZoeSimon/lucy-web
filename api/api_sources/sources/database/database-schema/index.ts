@@ -27,5 +27,6 @@ export * from './spaceGeom.schema';
 export * from './seed.schema';
 export * from './monitor.schema';
 export * from './countryProvinceSchema';
+export * from './biologicalTreatment.schema';
 export * from '../../libs/core-database/sql.loader';
 // ---------------------------------------------------------------------------------------------------

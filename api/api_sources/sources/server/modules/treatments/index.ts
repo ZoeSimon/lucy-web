@@ -22,5 +22,6 @@
  */
 export * from './mechanical/mechanical.treatment.route';
 export * from './chemical/chemicalTreatment.route';
+export * from './biological/biologicalTreatment.route';
 
 // ---------------------------------------------------------

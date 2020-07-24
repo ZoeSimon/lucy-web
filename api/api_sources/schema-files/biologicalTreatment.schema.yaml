@@ -1,0 +1,42 @@
+version: '1.0'
+description: Schema file for table biological_treatment
+externalTables: []
+includes:
+  - spaceGeom.schema.yaml
+schemas:
+  ## -- BiologicalTreatmentSchema
+  BiologicalTreatmentSchema:
+    name: biological_treatment
+    description: 'An application of a biological treatment.'
+    meta:
+      baseModel: Record
+      resource: true
+      api: /treatment/biological
+      base: /api
+    displayLayout: {}
+    layout: {}
+    computedFields: {}
+    relations: {}
+    ## -- Columns
+    columns:
+      id:
+        name: biological_treatment_id
+        comment: Auto generated sequential primary key column.
+        definition: SERIAL PRIMARY KEY
+    ## -- END: Columns
+    ## -- Versions
+    versions: []
+    ## -- END: Versions
+    ## -- Fields
+    fields: {}
+    ## -- END: Fields
+    ## -- CopyFrom
+    # Copy Columns, version from other schema
+    copyFrom:
+      # Key: SpaceGeomModelSchema
+      SpaceGeomModelSchema:
+        versions:
+          - spaceGeom
+      # -- SpaceGeomModelSchema
+    ## -- End - CopyFrom
+  ## -- END: BiologicalTreatmentSchema
