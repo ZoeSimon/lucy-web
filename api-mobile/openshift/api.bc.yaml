@@ -21,7 +21,7 @@ parameters:
   value: '1.0'
 - name: SOURCE_CONTEXT_DIR
   required: true
-  value: api/api_sources
+  value: api-mobile
 - name: SOURCE_REPOSITORY_URL
   required: true
   value: https://github.com/bcgov/lucy-web
