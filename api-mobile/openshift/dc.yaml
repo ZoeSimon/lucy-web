@@ -56,17 +56,17 @@ objects:
             valueFrom:
               secretKeyRef:
                 key: database-user
-                name: ${NAME}${SUFFIX}
+                name: ${DBNAME}${SUFFIX}
           - name: DB_PASS
             valueFrom:
               secretKeyRef:
                 key: database-password
-                name: ${NAME}${SUFFIX}
+                name: ${DBNAME}${SUFFIX}
           - name: DB_DATABASE
             valueFrom:
               secretKeyRef:
                 key: database-name
-                name: ${NAME}${SUFFIX}
+                name: ${DBNAME}${SUFFIX}
           - name: DB_PORT
             value: "5432"
           - name: APP_CERTIFICATE_URL
@@ -248,6 +248,8 @@ metadata:
 parameters:
 - name: NAME
   value: invasivesbc-api-mobile
+- name: DBNAME
+  value: invasivesbc-api
 - name: SUFFIX
   value: "-dev"
 - name: VERSION

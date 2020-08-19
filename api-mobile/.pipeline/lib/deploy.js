@@ -15,6 +15,7 @@ module.exports = settings => {
     ...oc.processDeploymentTemplate(`${templatesLocalBaseUrl}/dc.yaml`, {
       param: {
         NAME: phases[phase].name,
+        DBNAME: phases[phase].dbName,
         SUFFIX: phases[phase].suffix,
         VERSION: phases[phase].tag,
         HOST: phases[phase].host,
