@@ -35,7 +35,7 @@ const processOptions = options => {
   return result;
 };
 
-processedOptions = processOptions(options);
+const processedOptions = processOptions(options);
 
 const phases = {
   build: {
