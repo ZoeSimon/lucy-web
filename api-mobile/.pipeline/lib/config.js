@@ -35,7 +35,7 @@ const processOptions = options => {
   return result;
 };
 
-const processedOptions = processOptions(options);
+options = processOptions(options);
 
 const phases = {
   build: {
@@ -109,4 +109,4 @@ process.on('unhandledRejection', reason => {
   process.exit(1);
 });
 
-module.exports = exports = { phases, processedOptions, staticBranches };
+module.exports = exports = { phases, options, staticBranches };

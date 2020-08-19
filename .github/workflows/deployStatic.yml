@@ -62,6 +62,8 @@ jobs:
     if: ${{ github.event.pull_request.merged == true}} # Only run when the PR is merged
     env:
       BUILD_ID: ${{ github.event.number }}
+    needs: 
+      - buildAPI
     steps:
       # Checkout the PR branch
       - name: Checkout Target Branch
