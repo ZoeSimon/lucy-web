@@ -54,7 +54,7 @@ module.exports = settings => {
         VERSION: phases[phase].tag,
         CHANGE_ID: phases[phase].changeId,
         ENVIRONMENT: phases[phase].env || 'dev',
-        DB_SERVICE_NAME: `${imageStreamName}-postgresql${phases[phase].suffix}`,
+        DB_SERVICE_NAME: `${phases[phase].dbName}-postgresql${phases[phase].suffix}`,
         IMAGE: imageStream.image.dockerImageReference,
         DB_MIGRATION_TYPE: phases[phase].migrationInfo.type,
         DB_CLEAN_UP: phases[phase].migrationInfo.cleanup,

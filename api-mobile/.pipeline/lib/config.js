@@ -4,6 +4,7 @@ const config = require('../../../.config/config.json');
 
 const defaultHost = 'invasivebc-8ecbmv-api-mobile.pathfinder.gov.bc.ca';
 const name = (config.module && config.module['api-mobile']) || 'lucy-api-mobile';
+const dbName = (config.module && config.module['api']) || 'lucy-api';
 const changeId = options.pr || `${Math.floor(Date.now() * 1000) / 60.0}`; //aka pull-request or brach to process
 const version = config.version || '1.0.0';
 const deployType = options.type || '';
@@ -41,6 +42,7 @@ const phases = {
   build: {
     namespace: '8ecbmv-tools',
     name: `${name}`,
+    dbName: `${dbName}`,
     phase: 'build',
     changeId: changeId,
     suffix: `-build-${changeId}`,
@@ -52,6 +54,7 @@ const phases = {
   dev: {
     namespace: '8ecbmv-dev',
     name: `${name}`,
+    dbName: `${dbName}`,
     phase: 'dev',
     changeId: deployChangeId,
     suffix: `-dev-${deployChangeId}`,
@@ -70,6 +73,7 @@ const phases = {
   test: {
     namespace: '8ecbmv-test',
     name: `${name}`,
+    dbName: `${dbName}`,
     phase: 'test',
     changeId: deployChangeId,
     suffix: `-test`,
@@ -87,6 +91,7 @@ const phases = {
   prod: {
     namespace: '8ecbmv-prod',
     name: `${name}`,
+    dbName: `${dbName}`,
     phase: 'prod',
     changeId: deployChangeId,
     suffix: `-prod`,

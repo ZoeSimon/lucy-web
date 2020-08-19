@@ -20,7 +20,7 @@ module.exports = settings => {
         HOST: phases[phase].host,
         CHANGE_ID: phases.build.changeId || changeId,
         ENVIRONMENT: phases[phase].env || 'dev',
-        DB_SERVICE_NAME: `${phases[phase].name}-postgresql${phases[phase].suffix}`,
+        DB_SERVICE_NAME: `${phases[phase].dbName}-postgresql${phases[phase].suffix}`,
         CERTIFICATE_URL: phases[phase].certificateURL,
         DB_MIGRATION_TYPE: phases[phase].migrationInfo.type,
         DB_CLEAN_UP: phases[phase].migrationInfo.cleanup,
