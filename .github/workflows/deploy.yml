@@ -133,6 +133,7 @@ jobs:
     if: ${{ github.event.pull_request.merged == false}}
     needs:
       - buildAPI
+      - buildAPIMobile
       - buildAPP
     steps:
       # Checkout the PR branch
@@ -197,7 +198,7 @@ jobs:
   # End deploy
 
   clean:
-    name: Deploy Deployment Artifacts for App, API, and API-MOBILE
+    name: Clean Deployment Artifacts for App, API, and API-MOBILE
     runs-on: ubuntu-latest
     if: ${{ github.event.pull_request.merged == true && (github.base_ref != 'dev' && github.base_ref != 'prod') }}
     steps:
