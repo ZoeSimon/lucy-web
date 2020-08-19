@@ -1,5 +1,5 @@
 'use strict';
-const options = require('pipeline-cli').Util.parseArguments();
+let options = require('pipeline-cli').Util.parseArguments();
 const config = require('../../../.config/config.json');
 
 const defaultHost = 'invasivebc-8ecbmv-api-mobile.pathfinder.gov.bc.ca';
