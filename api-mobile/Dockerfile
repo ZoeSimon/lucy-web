@@ -1,7 +1,6 @@
 FROM node:10
 
-
-ENV PORT 3001
+ENV PORT 3002
 ENV HOME /opt/app-root/src/app
 
 # Creating HOME
