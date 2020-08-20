@@ -2,9 +2,6 @@ import del from 'del';
 import gulp from 'gulp';
 import ts from 'gulp-typescript';
 
-// Clean the dist folder, and build the api dist
-gulp.task('build', gulp.series('clean', 'ts-server'));
-
 // Clean (delete) the dist folder
 gulp.task('clean', () => {
   return del(['./dist']);
@@ -16,3 +13,6 @@ gulp.task('ts-server', () => {
   const tsResult = tsProject.src().pipe(tsProject());
   return tsResult.js.pipe(gulp.dest('dist'));
 });
+
+// Clean the dist folder, and build the api dist
+gulp.task('build', gulp.series('clean', 'ts-server'));
