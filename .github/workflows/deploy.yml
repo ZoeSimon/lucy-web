@@ -182,7 +182,7 @@ jobs:
         run: |
           export PATH=$PATH_TO_OC
           npm ci
-          # DEBUG=* npm run setup -- --pr=${{ github.event.number }} --env=dev  
+          DEBUG=* npm run setup -- --pr=${{ github.event.number }} --env=dev  
           # DEBUG=* npm run test -- --pr=${{ github.event.number }} --env=dev 
           DEBUG=* npm run deploy -- --pr=${{ github.event.number }} --env=dev 
 
@@ -240,13 +240,13 @@ jobs:
           DEBUG=* npm run clean -- --pr=${{ github.event.number }} --env=dev
 
       # Clean the api-mobile deployment artifacts via execution of `oc` commands/scripts
-      - name: Clean API Mobile Deployment
-        working-directory: "./api-mobile/.pipeline/"
-        run: |
-          export PATH=$PATH_TO_OC
-          npm ci
-          DEBUG=* npm run clean -- --pr=${{ github.event.number }} --env=build
-          DEBUG=* npm run clean -- --pr=${{ github.event.number }} --env=dev
+      # - name: Clean API Mobile Deployment
+      #   working-directory: "./api-mobile/.pipeline/"
+      #   run: |
+      #     export PATH=$PATH_TO_OC
+      #     npm ci
+      #     DEBUG=* npm run clean -- --pr=${{ github.event.number }} --env=build
+      #     DEBUG=* npm run clean -- --pr=${{ github.event.number }} --env=dev
 
       # Clean the app deployment artifacts via execution of `oc` commands/scripts
       - name: Clean APP Deployment
