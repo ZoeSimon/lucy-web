@@ -38,7 +38,7 @@ COPY ./ .
 # Cleaning any existing generated file
 RUN rm -rf ./dist
 
-# Building App
+# Build the api dist
 RUN npm run build
 
 # Setting NODE_PATH
