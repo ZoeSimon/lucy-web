@@ -172,9 +172,9 @@ jobs:
           DEBUG=* npm run pre-deploy -- --pr=${{ github.event.number }} --env=dev  
           DEBUG=* npm run setup -- --pr=${{ github.event.number }} --env=dev  
           DEBUG=* npm run seed -- --pr=${{ github.event.number }} --env=dev 
-          DEBUG=* npm run test -- --pr=${{ github.event.number }} --env=dev 
+          # DEBUG=* npm run test -- --pr=${{ github.event.number }} --env=dev 
           DEBUG=* npm run deploy -- --pr=${{ github.event.number }} --env=dev 
-          DEBUG=* npm run deploy-tools -- --pr=${{ github.event.number }} --env=dev
+          # DEBUG=* npm run deploy-tools -- --pr=${{ github.event.number }} --env=dev
 
       # Deploy the api-mobile via execution of `oc` commands/scripts
       - name: Deploy API Mobile
