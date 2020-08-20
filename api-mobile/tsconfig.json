@@ -1,12 +1,18 @@
 {
   "compilerOptions": {
+    "outDir": "dist",
     "module": "commonjs",
     "target": "es5",
     "lib": ["es2018"],
-    "moduleResolution": "node",
     "sourceMap": true,
     "allowJs": false,
-    "outDir": "dist",
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
     "baseUrl": ".",
     "paths": {
       "*": ["node_modules/*"]
@@ -14,15 +20,9 @@
     "esModuleInterop": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "resolveJsonModule": true,
     "skipLibCheck": true,
-    "suppressImplicitAnyIndexErrors": true
+    "resolveJsonModule": true
   },
   "include": ["src/**/*"],
-  "exclude": ["**/*.spec.ts"]
+  "exclude": ["**/*.spec.ts", "**/node_modules", "dist"]
 }
