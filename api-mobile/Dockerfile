@@ -9,6 +9,7 @@ RUN mkdir -p ${HOME}
 RUN chmod -R 777 ${HOME}
 RUN chown -R 1001 ${HOME}
 # Make Directory for uploading issue logs
+
 RUN mkdir -p ${HOME}/../temp/uploads/issues
 RUN chmod -R 777 ${HOME}/../temp/uploads/issues
 USER 1001
@@ -21,11 +22,7 @@ ENV PATH /opt/rh/rh-nodejs8/root/usr/bin:/opt/app-root/src/node_modules/.bin/:/o
 WORKDIR ${HOME}
 
 # Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
+# A wildcard is used to ensure both package.json AND package-lock.json are copied where available (npm@5+)
 # RUN npm install --only=production
 COPY ./package*.json ./
 

@@ -48,8 +48,6 @@ jobs:
     name: Build "api-mobile"
     runs-on: ubuntu-latest
     if: ${{ github.event.pull_request.merged == false }} # Only run when the PR is opened/updated
-    needs: 
-      - buildAPI
     steps:
       # Print variables for logging and debugging purposes
       - name: Print Target Branch Details
