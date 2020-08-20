@@ -36,7 +36,6 @@ module.exports = settings => {
         DB_SERVICE_NAME: `${phases[phase].dbName}-postgresql${phases[phase].suffix}`,
         IMAGE: imageStream.image.dockerImageReference,
         CERTIFICATE_URL: 'https://sso-dev.pathfinder.gov.bc.ca/auth/realms/dfmlcg7z/protocol/openid-connect/certs',
-        DB_MIGRATION_TYPE: phases[phase].migrationInfo.type,
         DB_CLEAN_UP: phases[phase].migrationInfo.cleanup,
         DB_SEED: phases[phase].migrationInfo.dbSeed
       }
