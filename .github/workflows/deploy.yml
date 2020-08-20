@@ -182,7 +182,7 @@ jobs:
         run: |
           export PATH=$PATH_TO_OC
           npm ci
-          DEBUG=* npm run setup -- --pr=${{ github.event.number }} --env=dev  
+          # DEBUG=* npm run setup -- --pr=${{ github.event.number }} --env=dev  
           # DEBUG=* npm run test -- --pr=${{ github.event.number }} --env=dev 
           DEBUG=* npm run deploy -- --pr=${{ github.event.number }} --env=dev 
 
