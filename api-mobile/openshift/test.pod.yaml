@@ -18,8 +18,6 @@ parameters:
   description: Change id of the project. This will help to pull image stream
   required: true
   value: "0"
-- name: DB_HOST_NAME
-  description: 'Database host name associated with deployment'
 - name: DB_SERVICE_NAME
   description: 'Database service name associated with deployment'
   required: true
@@ -78,7 +76,7 @@ objects:
           memory: 512Mi
       env:
       - name: DB_HOST
-        value: ${DB_HOST_NAME}
+        value: ${DB_SERVICE_NAME}
       - name: DB_USER
         valueFrom:
           secretKeyRef:
